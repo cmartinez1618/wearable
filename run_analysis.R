@@ -63,7 +63,7 @@ combined_melted <- melt(combined_dat, id = c("subject","activity"))
 combined_final <- dcast(combined_melted, subject + activity ~ variable, mean)
 
 # save the final data set 
-write.table(combined_final, file ="./final_dat.txt")
+write.table(combined_final, file ="./final_dat.txt", row.names = FALSE, quote = FALSE)
 
 
 
